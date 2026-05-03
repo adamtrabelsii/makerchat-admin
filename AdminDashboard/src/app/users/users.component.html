@@ -1,0 +1,29 @@
+<div class="main">
+
+  <span style="display:flex; justify-content: space-between; margin-left: 4rem;margin-right: 4rem;">
+    <h1>Users</h1>
+  </span>
+
+  <div class="content">
+
+    <table border="0">
+      <tr class="header">
+        <td>Users Names</td>
+        <td>Users emails</td>
+        <td>Actions</td>
+      </tr>
+      <ng-container *ngFor="let user of users$ | async">
+
+        <tr class="space-between">
+          <td>{{user.name}}</td>
+          <td>{{user.mail}}</td>
+          <td><button class="btn-unset delete" (click)="deleteUser(user.mail)">Delete</button></td>
+        </tr>
+
+      </ng-container>
+
+
+    </table>
+
+  </div>
+</div>

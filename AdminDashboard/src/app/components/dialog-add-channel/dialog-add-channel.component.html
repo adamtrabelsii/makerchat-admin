@@ -1,0 +1,35 @@
+<div class="userCard">
+  <mat-card>
+    <mat-card-header>
+      <h2>Add new channel</h2>
+
+
+    </mat-card-header>
+    <mat-card-content>
+      <mat-expansion-panel [expanded]="step === 0" (click)="setStep(0)" hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon><img src="assets/svg/color_d1d2d3/account.svg"></mat-icon>
+            channel name
+
+          </mat-panel-title>
+
+          <mat-panel-description>
+            <mat-icon *ngIf="step !== 0"><img src="assets/svg/color_d1d2d3/expand_more.svg"></mat-icon>
+            <mat-icon *ngIf="step === 0"><img src="assets/svg/color_d1d2d3/expand_less.svg"></mat-icon>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <form (ngSubmit)="onSubmit()" [formGroup]="channelForm">
+          <mat-form-field appClickStopPropagation appearance="fill">
+            <mat-label>Enter new channel name</mat-label>
+            <input matInput formControlName="name" required>
+          </mat-form-field>
+        </form>
+      </mat-expansion-panel>
+
+      <button (click)="onSubmit()" class="actionButton" mat-raised-button>Save</button>
+
+
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,40 @@
+mat-divider {
+  color: white;
+  background-color: white;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .logo {
+    width: 170px;
+    height: auto;
+  }
+}
+
+
+
+
+.workspace {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    margin-top: 1.3rem;
+    font-weight: 700;
+    font-size: 20px;
+    display: block;
+    color: white;
+  }
+
+  .footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+  }
+}

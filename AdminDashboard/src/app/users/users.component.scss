@@ -1,0 +1,68 @@
+.main {
+  h1 {
+    margin: 0 5rem;
+    font-weight: 700;
+    color: #0D2F4D;
+    margin-bottom: 6rem;
+  }
+
+  .header {
+    color: #0B496F;
+    font-weight: 700;
+    font-family: 'montserrat';
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    margin: 0 7rem;
+    font-weight: 600;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      tr {
+        border-bottom: 1px solid #060606;
+
+
+
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        td {
+          padding: 0.5rem;
+
+
+
+          button {
+            margin-right: 0.5rem;
+
+
+          }
+        }
+
+        .edit {
+          width: 80px;
+          height: 33px;
+          color: white;
+          font-weight: 700;
+          background: #095C87;
+          border-radius: 7px;
+        }
+
+        .delete {
+          width: 80px;
+          height: 33px;
+          color: white;
+          font-weight: 700;
+          background: #F74141;
+          border-radius: 7px;
+        }
+
+      }
+    }
+  }
+}

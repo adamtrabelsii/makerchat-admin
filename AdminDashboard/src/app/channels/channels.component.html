@@ -1,0 +1,30 @@
+<div class="main">
+
+  <span style="display:flex; justify-content: space-between; margin-left: 4rem;margin-right: 4rem;">
+    <h1>Channels</h1>
+    <div><button class="btn-unset" (click)="addChannel()" style="font-weight: 500; color: #0D2F4D; font-size: 21px;">Add
+        new</button></div>
+  </span>
+
+  <div class="content">
+
+    <table>
+      <tr class="header">
+        <td>Channel name</td>
+        <td>Users number</td>
+        <td>Actions</td>
+      </tr>
+      <tr *ngFor="let channel of channels$ | async">
+        <ng-container *ngIf="channel.category === 'channel' ">
+          <td>{{channel.channelName}}</td>
+          <td>{{channel.users.length}}</td>
+          <td><button class="btn-unset edit" (click)="editChannel(channel)">Edit</button><button
+              class="btn-unset delete" (click)="deleteChannel(channel)">Delete</button></td>
+        </ng-container>
+      </tr>
+
+
+    </table>
+
+  </div>
+</div>

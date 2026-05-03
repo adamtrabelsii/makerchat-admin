@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "makerchat-final-4b88f": {
+      "hosting": {
+        "AdminDashboard": [
+          "makerchat-final-4b88f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "makerchat-final-4b88f"
+  }
+}
